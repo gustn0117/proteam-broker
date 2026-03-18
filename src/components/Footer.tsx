@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10">
           <div>
             <span className="text-white text-[15px] font-bold tracking-[0.02em]">PRO&TEAM IP</span>
-            <p className="text-white/20 text-[11px] tracking-[0.15em] mt-1.5">INTELLECTUAL PROPERTY</p>
+            <p className="text-white/40 text-[11px] tracking-[0.15em] mt-1.5">INTELLECTUAL PROPERTY</p>
           </div>
           <nav className="flex gap-10">
             {[
@@ -18,7 +18,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white/30 hover:text-white/60 text-xs tracking-wide transition-colors duration-300"
+                className="text-white/50 hover:text-white/80 text-xs tracking-wide transition-colors duration-300"
               >
                 {item.label}
               </Link>
@@ -26,7 +26,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="border-t border-white/[0.06] mt-12 pt-8">
-          <p className="text-white/15 text-xs">
+          <p className="text-white/40 text-xs">
             &copy; {new Date().getFullYear()} Pro &amp; Team IP. All rights reserved.
           </p>
         </div>

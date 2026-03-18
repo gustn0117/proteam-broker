@@ -34,7 +34,7 @@ export default function ServicesPage() {
                 className="group py-8 first:pt-0 last:pb-0"
               >
                 <div className="flex items-start gap-6">
-                  <span className="text-[11px] font-semibold text-navy/15 tracking-wider mt-1 flex-shrink-0 w-6">
+                  <span className="text-[11px] font-semibold text-navy/40 tracking-wider mt-1 flex-shrink-0 w-6">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>

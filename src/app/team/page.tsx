@@ -59,7 +59,7 @@ export default function TeamPage() {
                 {/* Pattern Avatar */}
                 <div className="pattern-avatar rounded-2xl aspect-[4/3] relative flex items-center justify-center overflow-hidden mb-8">
                   <div className="w-24 h-24 rounded-full bg-white/70 backdrop-blur-sm border border-navy/[0.08] flex items-center justify-center shadow-lg shadow-navy/5">
-                    <span className="text-navy/30 text-2xl font-bold tracking-wider">
+                    <span className="text-navy/50 text-2xl font-bold tracking-wider">
                       {member.initials}
                     </span>
                   </div>
@@ -81,12 +81,12 @@ export default function TeamPage() {
 
                 {/* Career */}
                 <div className="border-t border-navy/[0.08] pt-6 mt-8">
-                  <p className="text-[10px] font-semibold tracking-[0.2em] text-navy/40 mb-4">CAREER</p>
+                  <p className="text-[10px] font-semibold tracking-[0.2em] text-navy/60 mb-4">CAREER</p>
                   <div className="space-y-2.5">
                     {member.career.map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-[3px] h-[3px] rounded-full bg-gold/60 mt-[8px] flex-shrink-0" />
-                        <p className="text-navy/80 text-[13px] leading-relaxed">{item}</p>
+                        <p className="text-navy text-[13px] leading-relaxed">{item}</p>
                       </div>
                     ))}
                   </div>

@@ -28,7 +28,7 @@ export default function FeeStructurePage() {
         <div className="max-w-2xl mx-auto px-6">
           {/* Intro */}
           <div className="mb-16">
-            <p className="text-navy/60 text-[17px] leading-[1.9] font-light">
+            <p className="text-navy text-[17px] leading-[1.9] font-light">
               We offer three flexible fee structures to empower our clients with strategic choices.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function FeeStructurePage() {
           {/* Divider */}
           <div className="flex items-center gap-4 mb-10">
             <div className="w-6 h-[1px] bg-gold/50" />
-            <p className="text-[10px] font-semibold tracking-[0.25em] text-navy/25">
+            <p className="text-[10px] font-semibold tracking-[0.25em] text-navy/50">
               SERVICE FEE OPTIONS
             </p>
           </div>
@@ -48,14 +48,14 @@ export default function FeeStructurePage() {
                 key={option.number}
                 className="py-7 first:pt-0 last:pb-0 flex items-baseline gap-6"
               >
-                <span className="text-3xl font-bold text-navy/[0.06] flex-shrink-0 tabular-nums w-10">
+                <span className="text-3xl font-bold text-navy/[0.15] flex-shrink-0 tabular-nums w-10">
                   {option.number}.
                 </span>
                 <div>
                   <h3 className="text-[17px] font-semibold text-navy tracking-tight">
                     {option.title}
                   </h3>
-                  <p className="text-navy/30 text-sm mt-1 font-light">{option.subtitle}</p>
+                  <p className="text-navy/60 text-sm mt-1">{option.subtitle}</p>
                 </div>
               </div>
             ))}
