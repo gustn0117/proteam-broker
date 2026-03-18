@@ -1,21 +1,9 @@
 import Link from "next/link";
 
 const sections = [
-  {
-    label: "OUR TEAM",
-    labelKo: "팀 소개",
-    href: "/team",
-  },
-  {
-    label: "Services",
-    labelKo: "업무 분야",
-    href: "/services",
-  },
-  {
-    label: "Fee Structure",
-    labelKo: "서비스 비용",
-    href: "/fee-structure",
-  },
+  { label: "OUR TEAM", href: "/team" },
+  { label: "Services", href: "/services" },
+  { label: "Fee Structure", href: "/fee-structure" },
 ];
 
 export default function HomePage() {
@@ -55,7 +43,6 @@ export default function HomePage() {
               <h2 className="text-sm font-semibold text-white tracking-wide group-hover:text-gold transition-colors duration-500">
                 {section.label}
               </h2>
-              <p className="text-white/25 text-xs mt-2 font-light">{section.labelKo}</p>
               <div className="mt-6 flex items-center gap-2 text-white/0 group-hover:text-gold/60 transition-all duration-500">
                 <div className="w-4 h-[0.5px] bg-current" />
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

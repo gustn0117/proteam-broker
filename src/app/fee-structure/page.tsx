@@ -31,9 +31,6 @@ export default function FeeStructurePage() {
             <p className="text-navy/60 text-[17px] leading-[1.9] font-light">
               We offer three flexible fee structures to empower our clients with strategic choices.
             </p>
-            <p className="text-navy/30 text-[15px] leading-[1.9] mt-4 font-light">
-              고객님께서 전략적인 선택을 하실 수 있도록 세 가지 유연한 수수료 체계를 운영하고 있습니다.
-            </p>
           </div>
 
           {/* Divider */}

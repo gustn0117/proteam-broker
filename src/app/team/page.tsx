@@ -67,11 +67,10 @@ export default function TeamPage() {
 
                 {/* Name & Title */}
                 <h2 className="text-2xl font-bold text-navy tracking-tight">{member.name}</h2>
-                <p className="text-navy/50 mt-0.5">{member.nameKo}</p>
-                <div className="flex items-center gap-3 mt-4">
+                <div className="flex items-center gap-3 mt-3">
                   <div className="w-6 h-[1px] bg-gold/60" />
                   <span className="text-xs font-medium text-gold-dark tracking-wide">
-                    {member.title} ({member.titleKo})
+                    {member.title}
                   </span>
                 </div>
 

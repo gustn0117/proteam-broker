@@ -1,8 +1,8 @@
 const services = [
-  { title: "Patent and Technology Brokerage", titleKo: "특허 및 기술 거래 중개" },
-  { title: "Patent Licensing Services", titleKo: "특허 라이센싱" },
-  { title: "Patent Valuation", titleKo: "특허 가치평가" },
-  { title: "Patent Litigation Funding", titleKo: "특허 수익화, 소송 펀딩 등" },
+  { title: "Patent and Technology Brokerage" },
+  { title: "Patent Licensing Services" },
+  { title: "Patent Valuation" },
+  { title: "Patent Litigation Funding" },
 ];
 
 export default function ServicesPage() {
@@ -21,7 +21,6 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
           <p className="text-gold/60 text-[11px] font-medium tracking-[0.25em] mb-4">WHAT WE DO</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Services</h1>
-          <p className="text-white/30 text-sm mt-3 font-light">업무 분야</p>
         </div>
       </section>
 
@@ -42,9 +41,6 @@ export default function ServicesPage() {
                     <h2 className="text-lg font-semibold text-navy tracking-tight">
                       {service.title}
                     </h2>
-                    <p className="text-navy/30 text-sm mt-1.5 font-light">
-                      {service.titleKo}
-                    </p>
                   </div>
                 </div>
               </div>
