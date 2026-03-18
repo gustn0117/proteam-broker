@@ -11,28 +11,69 @@
 }
 
 body {
-  font-family: 'Noto Sans KR', 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
   background-color: #ffffff;
   color: #1B2A4A;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #1B2A4A;
   border-radius: 3px;
 }
 
-/* Section transitions */
-section {
-  opacity: 1;
+.pattern-dots {
+  background-image: radial-gradient(circle, #1B2A4A 1px, transparent 1px);
+  background-size: 20px 20px;
 }
+
+.pattern-grid {
+  background-image:
+    linear-gradient(rgba(27,42,74,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27,42,74,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(27,42,74,0.04) 10px,
+    rgba(27,42,74,0.04) 11px
+  );
+}
+
+.pattern-avatar {
+  background-color: #E8ECF3;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(27,42,74,0.06) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(27,42,74,0.06) 2px, transparent 2px),
+    radial-gradient(circle at 50% 50%, rgba(27,42,74,0.03) 3px, transparent 3px),
+    linear-gradient(45deg, rgba(200,169,110,0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(200,169,110,0.08) 25%, transparent 25%);
+  background-size: 30px 30px, 30px 30px, 20px 20px, 40px 40px, 40px 40px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.animate-fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }

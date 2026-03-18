@@ -14,7 +14,7 @@ const teamMembers = [
       "2016~2017: Seoul Semiconductor, IP Team",
       "2017~2027: KIM & CHANG Law Firm, IP Team (Attorney at Law, member of Washington D.C. Bar)",
     ],
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+    initials: "OJK",
   },
   {
     name: "Sean (Seunghun) Lee",
@@ -30,7 +30,7 @@ const teamMembers = [
       "2015 – 2026: Head of Overseas Dispute Team, Kim & Chang",
       "2006 – 2015: Electronics Division, Kim & Chang",
     ],
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    initials: "SHL",
   },
 ];
 
@@ -38,60 +38,78 @@ export default function TeamPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-navy-dark/90" />
+      <section className="relative pt-28 pb-14 bg-navy overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="w-full h-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+          }} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            OUR TEAM
-          </h1>
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <p className="text-gold/70 text-[11px] font-semibold tracking-[0.2em] mb-3">LEADERSHIP</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-white">OUR TEAM</h1>
         </div>
       </section>
 
       {/* Team Members */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#FAFBFC]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="border border-gray-200 rounded-2xl overflow-hidden">
-                {/* Photo */}
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+              >
+                {/* Pattern Avatar Area */}
+                <div className="pattern-avatar h-52 relative flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-navy/10 border-2 border-navy/20 flex items-center justify-center backdrop-blur-sm">
+                    <span className="text-navy/50 text-xl font-bold tracking-wide">
+                      {member.initials}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
                 </div>
 
                 {/* Name & Title */}
-                <div className="px-8 pt-8 pb-6 text-center border-b border-gray-100">
-                  <h2 className="text-xl font-bold text-navy">
-                    {member.name} ({member.nameKo})
+                <div className="px-7 pt-2 pb-5 text-center border-b border-gray-50">
+                  <h2 className="text-lg font-bold text-navy leading-snug">
+                    {member.name}
                   </h2>
-                  <p className="text-navy-400 mt-1">{member.title}</p>
-                  <p className="text-navy-300 text-sm">({member.titleKo})</p>
+                  <p className="text-navy/40 text-sm mt-0.5">{member.nameKo}</p>
+                  <div className="mt-3 inline-block">
+                    <span className="text-[11px] font-semibold tracking-wide text-navy/50 bg-navy/[0.04] rounded-full px-3.5 py-1">
+                      {member.title} ({member.titleKo})
+                    </span>
+                  </div>
                 </div>
 
-                {/* Bio & Career */}
-                <div className="px-8 py-6 space-y-4">
-                  <p className="text-navy-400 text-sm leading-relaxed">
+                {/* Bio */}
+                <div className="px-7 py-6 space-y-3">
+                  <p className="text-navy/70 text-[13px] leading-[1.8]">
                     {member.bioEn}
                   </p>
-                  <p className="text-navy-300 text-sm leading-relaxed">
+                  <p className="text-navy/40 text-[13px] leading-[1.8]">
                     {member.bioKo}
                   </p>
-                  <div className="pt-4 border-t border-gray-100 space-y-1.5">
-                    {member.career.map((item, i) => (
-                      <p key={i} className="text-navy-300 text-sm">
-                        {item}
-                      </p>
-                    ))}
+                </div>
+
+                {/* Career */}
+                <div className="px-7 pb-7">
+                  <div className="bg-[#FAFBFC] rounded-xl p-5 border border-gray-50">
+                    <p className="text-[10px] font-semibold tracking-[0.15em] text-navy/30 mb-3">
+                      CAREER
+                    </p>
+                    <div className="space-y-2">
+                      {member.career.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2.5">
+                          <div className="w-1 h-1 rounded-full bg-gold/60 mt-[7px] flex-shrink-0" />
+                          <p className="text-navy/50 text-xs leading-relaxed">{item}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
