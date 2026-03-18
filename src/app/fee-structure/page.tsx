@@ -45,48 +45,56 @@ export default function FeeStructurePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Fee <span className="text-primary">Structure</span>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-navy-dark/90" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <p className="text-gold font-semibold text-xs tracking-[0.2em] mb-3">PRICING</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Fee Structure
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-3">
+          <p className="text-white/60 max-w-2xl mx-auto mb-2">
             We offer three flexible fee structures to empower our clients with
             strategic choices.
           </p>
-          <p className="text-gray-500 max-w-xl mx-auto">
-            고객님께서 전략적인 선택을 하실 수 있도록 세 가지 유연한 수수료 체계를
-            운영하고 있습니다.
+          <p className="text-white/40 max-w-xl mx-auto text-sm">
+            고객님께서 전략적인 선택을 하실 수 있도록 세 가지 유연한 수수료 체계를 운영하고 있습니다.
           </p>
         </div>
       </section>
 
       {/* Fee Cards */}
-      <section className="bg-dark-light py-20">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-center text-sm font-semibold text-primary tracking-widest mb-12">
+          <p className="text-center text-gold font-semibold text-xs tracking-[0.2em] mb-12">
             SERVICE FEE OPTIONS
-          </h2>
+          </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {feeOptions.map((option, index) => (
               <div
                 key={index}
-                className={`rounded-xl p-8 relative transition-transform hover:-translate-y-2 duration-300 ${
+                className={`rounded-2xl p-8 relative transition-all duration-300 hover:-translate-y-2 ${
                   option.highlighted
-                    ? "bg-primary text-white border-2 border-primary"
-                    : "bg-dark border border-gray-700 text-white"
+                    ? "bg-navy text-white shadow-2xl shadow-navy/30 scale-[1.02]"
+                    : "bg-white border border-gray-200 text-navy shadow-lg shadow-navy/5"
                 }`}
               >
                 {option.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-primary text-xs font-bold px-4 py-1 rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-navy-dark text-xs font-bold px-5 py-1.5 rounded-full">
                     RECOMMENDED
                   </div>
                 )}
 
                 <div
-                  className={`text-4xl font-bold mb-4 ${
-                    option.highlighted ? "text-white/30" : "text-primary/30"
+                  className={`text-5xl font-bold mb-6 ${
+                    option.highlighted ? "text-white/15" : "text-navy/10"
                   }`}
                 >
                   {option.number}
@@ -94,27 +102,27 @@ export default function FeeStructurePage() {
 
                 <h3 className="text-xl font-bold mb-1">{option.title}</h3>
                 <p
-                  className={`text-sm mb-4 ${
-                    option.highlighted ? "text-white/70" : "text-gray-500"
+                  className={`text-sm mb-5 ${
+                    option.highlighted ? "text-gold" : "text-gold-dark"
                   }`}
                 >
                   {option.subtitle}
                 </p>
 
                 <p
-                  className={`text-sm leading-relaxed mb-6 ${
-                    option.highlighted ? "text-white/80" : "text-gray-400"
+                  className={`text-sm leading-relaxed mb-8 ${
+                    option.highlighted ? "text-white/70" : "text-navy-300"
                   }`}
                 >
                   {option.description}
                 </p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {option.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm">
                       <svg
                         className={`w-4 h-4 flex-shrink-0 ${
-                          option.highlighted ? "text-white" : "text-primary"
+                          option.highlighted ? "text-gold" : "text-navy"
                         }`}
                         fill="currentColor"
                         viewBox="0 0 20 20"
@@ -127,7 +135,7 @@ export default function FeeStructurePage() {
                       </svg>
                       <span
                         className={
-                          option.highlighted ? "text-white/90" : "text-gray-300"
+                          option.highlighted ? "text-white/80" : "text-navy-400"
                         }
                       >
                         {feature}

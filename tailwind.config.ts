@@ -9,14 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#1B2A4A",
-        "primary-dark": "#142038",
-        dark: "#1A1A1A",
-        "dark-light": "#2A2A2A",
-        "dark-card": "#333333",
+        navy: {
+          DEFAULT: "#1B2A4A",
+          dark: "#0F1A2E",
+          light: "#2E4272",
+          50: "#E8ECF3",
+          100: "#C5CEE0",
+          200: "#8FA3C4",
+          300: "#5B7BB5",
+          400: "#3A5A8C",
+          500: "#1B2A4A",
+          600: "#162240",
+          700: "#0F1A2E",
+          800: "#0A1220",
+          900: "#050A14",
+        },
+        gold: {
+          DEFAULT: "#C8A96E",
+          light: "#D4BC8E",
+          dark: "#A88B4A",
+        },
       },
       fontFamily: {
         sans: ["Noto Sans KR", "Inter", "sans-serif"],
+        serif: ["Georgia", "Cambria", "serif"],
       },
     },
   },
