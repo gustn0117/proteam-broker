@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#7AB929",
-        "primary-dark": "#5A9A10",
+        primary: "#1B2A4A",
+        "primary-dark": "#142038",
         dark: "#1A1A1A",
         "dark-light": "#2A2A2A",
         "dark-card": "#333333",

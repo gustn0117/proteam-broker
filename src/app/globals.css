@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #7AB929;
-  --primary-dark: #5A9A10;
+  --primary: #1B2A4A;
+  --primary-dark: #142038;
   --dark: #1A1A1A;
   --dark-light: #2A2A2A;
 }
@@ -40,7 +40,7 @@ html {
   background: #1A1A1A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #7AB929;
+  background: #1B2A4A;
   border-radius: 4px;
 }
 
