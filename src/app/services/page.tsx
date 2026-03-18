@@ -12,7 +12,7 @@ export default function ServicesPage() {
       <section className="relative h-[340px] md:h-[400px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1507679799987-c73b1e0e42cd?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
             alt=""
             className="w-full h-full object-cover"
           />
