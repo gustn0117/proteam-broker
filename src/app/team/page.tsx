@@ -13,6 +13,7 @@ const teamMembers = [
       "2015~2016: KCC, IP Team",
       "1994~2013: Samsung Electro-Mechanics, IP Team",
     ],
+    photo: "/권오진.png",
     initials: "OJK",
   },
   {
@@ -27,6 +28,7 @@ const teamMembers = [
       "2015 – 2026: Head of Overseas Dispute Team, Kim & Chang",
       "2006 – 2015: Electronics Division, Kim & Chang",
     ],
+    photo: "/이승헌.png",
     initials: "SHL",
   },
 ];
@@ -56,13 +58,13 @@ export default function TeamPage() {
           <div className="grid md:grid-cols-2 gap-12">
             {teamMembers.map((member, index) => (
               <div key={index}>
-                {/* Pattern Avatar */}
-                <div className="pattern-avatar rounded-2xl aspect-[4/3] relative flex items-center justify-center overflow-hidden mb-8">
-                  <div className="w-24 h-24 rounded-full bg-white/70 backdrop-blur-sm border border-navy/[0.08] flex items-center justify-center shadow-lg shadow-navy/5">
-                    <span className="text-navy/50 text-2xl font-bold tracking-wider">
-                      {member.initials}
-                    </span>
-                  </div>
+                {/* Photo */}
+                <div className="rounded-2xl aspect-square relative overflow-hidden mb-8 bg-gray-100">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
                 {/* Name & Title */}
